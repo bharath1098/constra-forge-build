@@ -1,5 +1,4 @@
-
-import { Building, Bridge, Factory, School, Home, HardHat } from "lucide-react";
+import { Building, Factory, School, Home, HardHat, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -38,7 +37,7 @@ const Services = () => {
       description: "From office towers to retail spaces, we deliver commercial buildings that balance functionality, aesthetics, and sustainability."
     },
     {
-      icon: <Bridge size={36} />,
+      icon: <Building2 size={36} />,
       title: "Civil Infrastructure",
       description: "We build bridges, highways, and tunnels that connect communities and withstand the test of time."
     },
@@ -88,12 +87,8 @@ const Services = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button 
-            as={Link}
-            to="/services"
-            className="bg-construction-gold hover:bg-amber-600 text-white font-medium"
-          >
-            View All Services
+          <Button asChild className="bg-construction-gold hover:bg-amber-600 text-white font-medium">
+            <Link to="/services">View All Services</Link>
           </Button>
         </div>
       </div>

@@ -22,22 +22,22 @@ const ContactCTA = () => {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button 
-              as={Link}
-              to="/contact"
+              asChild
               size="lg" 
               className="bg-construction-gold hover:bg-amber-600 text-white font-medium text-lg"
             >
-              Get in Touch
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <Link to="/contact">
+                Get in Touch
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
             </Button>
             <Button 
-              as={Link}
-              to="/projects"
+              asChild
               variant="outline" 
               size="lg" 
               className="border-white text-white hover:bg-white/10 font-medium text-lg"
             >
-              View Our Projects
+              <Link to="/projects">View Our Projects</Link>
             </Button>
           </div>
         </div>

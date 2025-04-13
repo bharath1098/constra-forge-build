@@ -1,6 +1,5 @@
-
 import { useState, useEffect } from "react";
-import { Building, Bridge, Factory, School, Home, HardHat, ArrowRight } from "lucide-react";
+import { Building, Building2, Factory, School, Home, HardHat, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import ContactCTA from "@/components/cta/ContactCTA";
@@ -26,9 +25,7 @@ const ServicesPage = () => {
   const { toast } = useToast();
   
   useEffect(() => {
-    // Scroll to top when component mounts
     window.scrollTo(0, 0);
-    // Update document title
     document.title = "Our Services | ConstraBuild";
   }, []);
 
@@ -62,7 +59,7 @@ const ServicesPage = () => {
     },
     infrastructure: {
       id: "infrastructure",
-      icon: <Bridge size={36} />,
+      icon: <Building2 size={36} />,
       title: "Civil Infrastructure",
       description: "Our civil infrastructure services encompass the design and construction of the critical systems that connect communities and enable modern life. With expertise in bridges, highways, tunnels, and more, we deliver durable solutions that withstand the test of time.",
       features: [
@@ -148,7 +145,6 @@ const ServicesPage = () => {
 
   return (
     <>
-      {/* Hero Section */}
       <section className="pt-32 pb-20 bg-construction-navy text-white relative">
         <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ 
           backgroundImage: 'url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80")'
@@ -163,13 +159,11 @@ const ServicesPage = () => {
             </p>
           </div>
         </div>
-        {/* Diagonal Bottom Shape */}
         <div className="absolute bottom-0 left-0 right-0 h-16 bg-white" style={{
           clipPath: 'polygon(0 100%, 100% 100%, 100% 0)'
         }}></div>
       </section>
 
-      {/* Services Overview */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="mb-12 text-center animate-on-scroll">
@@ -210,7 +204,6 @@ const ServicesPage = () => {
         </div>
       </section>
 
-      {/* Service Details */}
       <section id="service-details" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="mb-12 text-center animate-on-scroll">
@@ -306,7 +299,6 @@ const ServicesPage = () => {
         </div>
       </section>
 
-      {/* Process Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-12 animate-on-scroll">
